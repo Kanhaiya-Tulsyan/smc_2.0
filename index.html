@@ -18,6 +18,8 @@
 
 	<!-- Start VWO Async SmartCode -->
 <script type="text/javascript">
+	window.VWO = window.VWO || [];
+    window.VWO.push(['setVariation', [{e: '8', v: '2'}]]);
     const params = new URLSearchParams(window.location.search);
     const accId = parseInt(params.get("id"));
     const accountId = accId || 981075;
