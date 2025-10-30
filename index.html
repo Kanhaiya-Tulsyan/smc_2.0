@@ -25,6 +25,11 @@ window.VWO.push(['setVariation', [{e: '6', v: '2'}]]);
 <!-- Start VWO Async SmartCode -->
 <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
 <script type='text/javascript' id='vwoCode'>
+	 const params = new URLSearchParams(window.location.search);
+     const accId = parseInt(params.get("id"));
+     const accountId = accId || 981075;
+     console.log("Account-Id ->", accountId);
+     /* eslint-disable no-undef */
 window._vwo_code ||
 (function () {
 var w=window,
@@ -32,7 +37,7 @@ d=document;
 if (d.URL.indexOf('__vwo_disable__') > -1 || w._vwo_code) {
 return;
 }
-var account_id=4000601,
+var account_id=accountId,
 version=2.2,
 settings_tolerance=10000,
 hide_element='body',
